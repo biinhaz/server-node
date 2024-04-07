@@ -1,0 +1,34 @@
+POST http://localhost:3333/events
+Content-Type: application/json
+
+{
+    "title": "Aniversário da Bia",
+    "details": null,
+    "maximumAtendees": 1
+}
+
+###
+
+POST http://localhost:3333/events/82373f36-06fb-4d4d-865d-9788534b05cf/attendees
+Content-Type: application/json
+
+{
+    "name": "Bia Miranda",
+    "email": "biamiranda038@gmail.com"
+}
+
+###
+
+GET http://localhost:3333/events/82373f36-06fb-4d4d-865d-9788534b05cf
+
+###
+
+GET http://localhost:3333/attendees/1/badge
+
+###
+
+GET http://localhost:3333/attendees/2/check-in
+
+###
+
+GET http://localhost:3333/events/82373f36-06fb-4d4d-865d-9788534b05cf/attendees?query=bia
