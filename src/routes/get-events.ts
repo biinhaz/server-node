@@ -37,7 +37,7 @@ export async function getEvents(app: FastifyInstance) {
                 title: true,
                 details: true,
                 slug: true,
-                maximumAtendees: true,
+                maximumAttendees: true,
                 _count: ({
                     select: {
                         attendees: true,
@@ -59,7 +59,7 @@ export async function getEvents(app: FastifyInstance) {
                 title: event.title,
                 details: event.details,
                 slug: event.slug,
-                maximumAttendees: event.maximumAtendees,
+                maximumAttendees: event.maximumAttendees,
                 attendeesAmount: event._count.attendees,
             },
         })

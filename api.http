@@ -4,7 +4,7 @@ Content-Type: application/json
 {
     "title": "Aniversário da Bia",
     "details": null,
-    "maximumAtendees": 1
+    "maximumAttendees": 1
 }
 
 ###

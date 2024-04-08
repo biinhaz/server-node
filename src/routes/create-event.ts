@@ -15,7 +15,7 @@ export async function createEvent(app: FastifyInstance) {
                 body: z.object({
                     title: z.string().min(4),
                     details: z.string().nullable(),
-                    maximumAtendees: z.number().int().positive().nullable(),
+                    maximumAttendees: z.number().int().positive().nullable(),
                 }),
             response: {
                 201: z.object({
@@ -27,7 +27,7 @@ export async function createEvent(app: FastifyInstance) {
             const {
                 title,
                 details,
-                maximumAtendees,
+                maximumAttendees,
             } = request.body
 
             const slug = generateSlug(title)
@@ -46,7 +46,7 @@ export async function createEvent(app: FastifyInstance) {
                 data: {
                     title,
                     details,
-                    maximumAtendees,
+                    maximumAttendees,
                     slug,
                 }
             })

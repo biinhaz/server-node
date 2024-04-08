@@ -18,7 +18,7 @@ async function createEvent(app) {
       body: z.object({
         title: z.string().min(4),
         details: z.string().nullable(),
-        maximumAtendees: z.number().int().positive().nullable()
+        maximumAttendees: z.number().int().positive().nullable()
       }),
       response: {
         201: z.object({
@@ -30,7 +30,7 @@ async function createEvent(app) {
     const {
       title,
       details,
-      maximumAtendees
+      maximumAttendees
     } = request.body;
     const slug = generateSlug(title);
     const eventsWithSameSlug = await prisma.event.findUnique({
@@ -45,7 +45,7 @@ async function createEvent(app) {
       data: {
         title,
         details,
-        maximumAtendees,
+        maximumAttendees,
         slug
       }
     });

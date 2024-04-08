@@ -58,7 +58,7 @@ async function registerForEvent(app) {
         eventId
       }
     });
-    if (event?.maximumAtendees && amoutOfAttendeesForEvents >= event?.maximumAtendees) {
+    if (event?.maximumAttendees && amoutOfAttendeesForEvents >= event?.maximumAttendees) {
       throw new BadRequest("Vagas esgotadas para esse evento.");
     }
     return reply.status(201).send({ attendeeId: attendee.id });

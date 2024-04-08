@@ -65,7 +65,7 @@ export async function registerForEvent(app: FastifyInstance) {
         }
     })
 
-    if(event?.maximumAtendees && amoutOfAttendeesForEvents >= event?.maximumAtendees) {
+    if(event?.maximumAttendees && amoutOfAttendeesForEvents >= event?.maximumAttendees) {
         throw new BadRequest('Vagas esgotadas para esse evento.')
     }
 
